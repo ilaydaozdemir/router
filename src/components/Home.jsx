@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   return (
-    <div>Home</div>
-  )
+    <>
+      <div>Home</div>
+      <button onClick={() => navigate("order-summary", { replace: true })}>
+        Place order
+      </button>
+    </>
+  );
 }
 
-export default Home
+export default Home;
